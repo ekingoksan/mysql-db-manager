@@ -77,7 +77,3 @@ pnpm dev
 ```
 
 App will be available at [http://localhost:3000](http://localhost:3000).
-
-## 📷 Screenshots
-
-_(Add screenshots of dashboard, table view, query editor, etc.)_
