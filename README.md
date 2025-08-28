@@ -75,5 +75,19 @@ pnpm prisma migrate dev
 # Run dev server
 pnpm dev
 ```
+## 🔑 Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+# Prisma database connection (for app's own users & connections)
+DATABASE_URL="mysql://username:password@localhost:3306/mysql_db_manager"
+
+# Session password (32+ chars, unique per deployment)
+SESSION_PASSWORD="your-32-characters-long-secret"
+
+# Optional
+NODE_ENV=development
+
 
 App will be available at [http://localhost:3000](http://localhost:3000).
