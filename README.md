@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MySQL DB Manager
 
-## Getting Started
+A modern, full-stack database management dashboard built with **Next.js 15**, **Prisma**, **TailwindCSS**, and **shadcn/ui**.
 
-First, run the development server:
+## ✨ Features
+
+- **Authentication**
+  - Custom auth (no NextAuth)
+  - Register, login, logout, session cookies
+  - Passwords hashed with bcrypt
+  - Middleware-protected routes and APIs
+
+- **Dashboard UI**
+  - Responsive layout with sidebar + navbar
+  - Dark/Light mode toggle
+  - Toast notifications with `sonner`
+
+- **Connections**
+  - Add, edit, delete MySQL/MariaDB connections
+  - Securely stored connection credentials
+  - View all databases and tables
+
+- **Tables**
+  - Browse table list (via information_schema)
+  - View table schema (columns, types, primary keys)
+  - Inline cell editor for quick edits
+  - Row operations:
+    - Add new rows (auto-increment, UUID, datetime defaults supported)
+    - Edit rows
+    - Delete rows
+    - Duplicate rows
+
+- **Query Editor**
+  - Run custom SQL queries
+  - Only supports `SELECT` queries for safety
+  - Results displayed in DataTable
+
+- **Export / Import**
+  - Export table data as **JSON** or **CSV**
+  - Import data from **JSON** or **CSV**
+
+- **DataTable Component**
+  - Reusable table with:
+    - Pagination
+    - Search
+    - Sorting
+    - Responsive (horizontal scroll only, no page scroll)
+
+- **Profile**
+  - Update name and email
+  - Change password (optional, leave blank to keep current)
+  - Feedback via toast messages
+
+## 🛠 Tech Stack
+
+- [Next.js 15](https://nextjs.org/)
+- [Prisma](https://www.prisma.io/)
+- [MySQL2](https://www.npmjs.com/package/mysql2)
+- [TailwindCSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [sonner](https://sonner.emilkowal.ski/)
+
+## 🚀 Getting Started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Install dependencies
+pnpm install
+
+# Generate Prisma client
+pnpm prisma generate
+
+# Apply migrations
+pnpm prisma migrate dev
+
+# Run dev server
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+App will be available at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📷 Screenshots
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_(Add screenshots of dashboard, table view, query editor, etc.)_
